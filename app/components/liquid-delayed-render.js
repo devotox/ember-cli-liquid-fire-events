@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-liquid-fire-events/components/liquid-delayed-render';
