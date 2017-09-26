@@ -8,12 +8,12 @@ export default function(delegateTo, ...args) {
 	const service = this.service || getOwner(viewRoot).lookup('service:liquid-fire-events');
 
 	return new RSVP.Promise((resolve) => {
-		service.trigger('transitionStarted');
+		service.trigger('transitionStart');
 		resolve();
 	}).then(() => {
 		return this.lookup(delegateTo).apply(this, args);
 	}).then((infos) => {
-		service.trigger('transitionFinished', this.newView);
+		service.trigger('transitionEnd', this.newView);
 		return infos;
 	});
 }

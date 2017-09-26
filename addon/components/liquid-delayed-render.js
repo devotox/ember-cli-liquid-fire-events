@@ -24,7 +24,7 @@ export default Component.extend({
 				: events.set('renderedOnce', true) && this._finish();
 		});
 
-		events.one('transitionFinished', this._finish.bind(this));
+		events.one('transitionEnd', this._finish.bind(this));
 
 		later(this._finish.bind(this), this.get('delay'));
 	},

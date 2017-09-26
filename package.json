@@ -1,17 +1,17 @@
 {
 	"name": "ember-cli-liquid-fire-events",
-	"version": "0.0.0",
-	"description": "The default blueprint for ember-cli addons.",
+	"version": "1.0.0",
+	"description": "Simple events triggered on Liquid Fire animations.",
+	"repository": "https://github.com/devotox/ember-cli-liquid-fire-events.git",
 	"keywords": [
 		"ember-addon"
 	],
 	"license": "MIT",
-	"author": "",
+	"author": "Devonte Emokpae",
 	"directories": {
 		"doc": "doc",
 		"test": "tests"
 	},
-	"repository": "",
 	"scripts": {
 		"build": "ember build",
 		"start": "ember server",
