@@ -18,20 +18,15 @@ export default Component.extend({
 	didInsertElement() {
 		let events = this.get('liquidFireEvents');
 
-		next(() => {
-			return events.get('renderedOnce')
-				? null
-				: events.set('renderedOnce', true) && this._finish();
-		});
+		later(this._finish.bind(this), this.get('delay'));
 
 		events.one('transitionEnd', this._finish.bind(this));
 
-		later(this._finish.bind(this), this.get('delay'));
+		next(() => !events.get('renderedOnce') && events.set('renderedOnce', this._finish()));
 	},
 
 	_finish() {
-		return this.get('isDestroyed')
-			? null
-			: this.set('animating', false);
+		next(() => !this.get('isDestroyed') && this.set('animating', false));
+		return true;
 	}
 });
