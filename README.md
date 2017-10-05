@@ -1,8 +1,10 @@
-[![Build Status](https://travis-ci.org/devotox/ember-cli-liquid-fire-events.svg?branch=master)](https://travis-ci.org/devotox/ember-cli-liquid-fire-events)
-[![npm version](https://badge.fury.io/js/ember-cli-liquid-fire-events.svg)](https://badge.fury.io/js/ember-cli-liquid-fire-events)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-liquid-fire-events.svg)](http://emberobserver.com/addons/ember-cli-liquid-fire-events)
-
 # ember-cli-liquid-fire-events
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-liquid-fire-events.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/devotox/ember-cli-liquid-fire-events.svg)](http://travis-ci.org/devotox/ember-cli-liquid-fire-events)
+[![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-liquid-fire-events.svg)](https://www.npmjs.org/package/ember-cli-liquid-fire-events)
+[![NPM Version](https://badge.fury.io/js/ember-cli-liquid-fire-events.svg)](http://badge.fury.io/js/ember-cli-liquid-fire-events)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-cli-liquid-fire-events.svg)](http://emberobserver.com/addons/ember-cli-liquid-fire-events)
 
 Provides a service `ember-cli-liquid-fire-events` that you can use to subscribe to the
 following events from Liquid Fire: `transitionStart` and `transitionEnd`.
