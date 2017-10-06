@@ -2,7 +2,7 @@
 
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-liquid-fire-events.svg)](http://emberobserver.com/addons/ember-cli-liquid-fire-events)
 [![Build Status](https://travis-ci.org/devotox/ember-cli-liquid-fire-events.svg)](http://travis-ci.org/devotox/ember-cli-liquid-fire-events)
-[![Coverage Status](https://coveralls.io/repos/github/devotox/mber-cli-liquid-fire-events/badge.svg)](https://coveralls.io/github/devotox/mber-cli-liquid-fire-events)
+[![Coverage Status](https://coveralls.io/repos/github/devotox/ember-cli-liquid-fire-events/badge.svg)](https://coveralls.io/github/devotox/ember-cli-liquid-fire-events)
 [![NPM Version](https://badge.fury.io/js/ember-cli-liquid-fire-events.svg)](http://badge.fury.io/js/ember-cli-liquid-fire-events)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-liquid-fire-events.svg)](https://www.npmjs.org/package/ember-cli-liquid-fire-events)
 [![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-liquid-fire-events.svg)](https://greenkeeper.io/)
