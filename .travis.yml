@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '4'
+- '6'
 sudo: false
 dist: trusty
 addons:
@@ -27,11 +27,21 @@ before_install:
 - npm install -g npm@4
 - npm --version
 - npm install -g greenkeeper-lockfile@1
+- npm install -g codecov
 before_script: greenkeeper-lockfile-update
 after_script: greenkeeper-lockfile-upload
 script:
-- node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+- COVERAGE=true node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+- codecov
 notifications:
+  webhooks:
+    urls:
+    - https://webhook.atomist.com/travis
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_error: always
   slack:
     rooms:
       secure: aPapcytj6zjoGBdPygCV48AifsPQJ7zuuDpKn50bkekUerc0nGAq0HK+lleev5Sps+78PP9TC2GRYWNsYVOm6V7Bd0DHonQexq9f3JOo0HUafDXDWSZAFJIN0ie5iHazjoTijfXdXyOsxBP1EineLLq5KDIYnCfiYj7JXwi4j6BodNV0sOW4tW8dmsEOD8yT/R0wtFfc0/jKGwlBEp+HVIl24Dr3NAnsGKlXy+hkaWsFyuWauRmzjsCI2m4Y1tQB4JfmhZdlV8v8yIaax4EXWv1f7SS51sBMjeH/hTbpEyGcs5FY823q/3uhzIqHgRDfiEYn0tMsBftXGb5BSeB4j7YRwvFLBq0OTSPejtsxSXGgt2+pl4uFnmyuwkkTgaIxVOqc4nymXoDbIBBxbsfsapVv5zts9Q6HuNvleS0XkM7oeNn6sD7H5WtRwpJ6irfy1hf6tZp4sGZ/dnhoHNsHuuqEm5ZNkFmvYQ9yyXNnSCS9ZpuVGvI12adbSVzfiEF7HqeL58/L01VeTm/jlvaBz505N6yDRdJ2uTdhLHNoK48hgsfmNalZf2pIpRb+PWqud9vzVUiJPjNAgr1pxyabpBLGJSKk3ESevXyzsdoQvkFEUCMGShn7SBt9Fw2nvYWfBpx4+1C3hLpbUj9p2YNfH836zEh755B2+G8BGy5UGC4=
