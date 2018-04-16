@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-liquid-fire-events",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple events triggered on Liquid Fire animations.",
   "repository": "https://github.com/devotox/ember-cli-liquid-fire-events.git",
   "keywords": [
