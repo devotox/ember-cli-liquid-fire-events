@@ -2,15 +2,15 @@
 
 ## Installation
 
-* `git clone <repository-url>`
-* `cd my-addon`
-* `npm install`
+* `git clone https://github.com/devotox/ember-cli-liquid-fire-events`
+* `cd ember-cli-liquid-fire-events`
+* `yarn install`
 
 ## Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+* `yarn lint:js`
+* `yarn lint:hbs`
+* `yarn lint:js --fix`
 
 ## Running tests
 
