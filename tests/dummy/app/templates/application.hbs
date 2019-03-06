@@ -1,15 +1,15 @@
 <h2 id="title">Liquid Fire Events</h2>
 
 {{#liquid-bind value}}
-	<div style='padding:5em;border:solid black 3px;height:8em'>
-		<h2>Regular Render</h2>
-		{{#liquid-delayed-render delay=5000}}
-			<h1> Delayed Render {{value}} </h1>
-		{{/liquid-delayed-render}}
-	</div>
+  <div class="container">
+    <h2>Regular Render</h2>
+    {{#liquid-delayed-render delay=5000}}
+      <h1> Delayed Render {{value}} </h1>
+    {{/liquid-delayed-render}}
+  </div>
 {{/liquid-bind}}
 
-<br/>
+<br>
 
 <button {{action (mut value) 0}}>0</button>
 <button {{action (mut value) 1}}>1</button>

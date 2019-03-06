@@ -1,42 +1,75 @@
+---
 language: node_js
 node_js:
-- '6'
+  # we recommend testing addons with the same minimum supported node version as Ember CLI
+  # so that your addon works for all apps
+  - "6"
+
 sudo: false
 dist: trusty
+
 addons:
   chrome: stable
+
 cache:
   yarn: true
+
 env:
-  matrix:
-  - EMBER_TRY_SCENARIO=ember-lts-2.12
-  - EMBER_TRY_SCENARIO=ember-lts-2.16
-  - EMBER_TRY_SCENARIO=ember-lts-2.18
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-  - EMBER_TRY_SCENARIO=ember-default
   global:
     # See https://git.io/vdao3 for details.
     JOBS: 1
     secure: fOTO/HpUT0xsfml9iXuEL9qBu0NVErcig6CmrS1DFv7f4x9/mYQMNzLUv5b6VBPqGHeFNHiGaUUza3Ufc5KpL7DOu/1y6TFQlSoM6MRRdIXb+50MObvkJ4wXwYJH7Zrb4g8RTaBOY9uU5XQkm/E6GWWF3NiYFoVzCYPNSgAALko1caoEX2hoJNXJSd0T4G+gxtxc2g08RGunBPLqIyy2avMRN4yq0WDN2NbBrztM01FA5RoOLPyX0hhzyIZ+45z34wKvZtu7rj9h1KbFOZOVFJWpHDa0bXxhF63ldxPINe2QMOSsOD22Czk1+IKyC+88gtkvUq7pGUaJK6YdVDRcW9G/DMHVy/IE2aFabrPDVgzrmeCoVKzATzt8nMfIMTTu9Unoa5fdohpJ0NPhYnPfVAGfJ+2MPITgP+x2X6M5+KgHCBdaIgwBVnZE9DTb1L9c/Eh50zeHHbfv9L+NVlbQFzMWNj+kKWMj0qwh6JPpSFiKaOvTK6XP+NSUc7euAZgqK6lwqS07pvcql4qvzbeRWyn/GZuRHOGvfkUNuvLee8dMKfpF3s1VQ6blHHqKB8qH2ifxawiztWgUkYxK0GFTk//ZopLzP90bLl0JiGlg517tp5V9eBOK5ZlPwsSOhD+wta9gCssPjK4i2H2IwLox7AqXegigBMdqIbXz9LaFVAY=
-matrix:
-  fast_finish: true
+
+branches:
+  only:
+    - master
+    # npm version tags
+    - /^v\d+\.\d+\.\d+/
+
+jobs:
+  fail_fast: true
   allow_failures:
-  - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-canary
+
+  include:
+    # runs linting and tests with current locked deps
+
+    - stage: "Tests"
+      name: "Tests"
+      install:
+        - yarn install --non-interactive
+      script:
+        - yarn lint:hbs
+        - yarn lint:js
+        - COVERAGE=true yarn test
+        - codecov
+
+    # - name: "Floating Dependencies"
+    #   script:
+    #     - yarn test
+
+    # we recommend new addons test the current and previous LTS
+    # as well as latest stable release (bonus points to beta/canary)
+    - stage: "Additional Tests"
+      env: EMBER_TRY_SCENARIO=ember-lts-2.18
+    - env: EMBER_TRY_SCENARIO=ember-lts-3.4
+    - env: EMBER_TRY_SCENARIO=ember-release
+    - env: EMBER_TRY_SCENARIO=ember-beta
+    - env: EMBER_TRY_SCENARIO=ember-canary
+    - env: EMBER_TRY_SCENARIO=ember-default-with-jquery
+
 before_install:
-- curl -o- -L https://yarnpkg.com/install.sh | bash
-- export PATH=$HOME/.yarn/bin:$PATH
-- yarn global add greenkeeper-lockfile@1
-- yarn global add codecov
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn global add greenkeeper-lockfile@1
+  - yarn global add codecov
+
 install:
-- yarn install --no-lockfile --non-interactive
-before_script: greenkeeper-lockfile-update
-after_script: greenkeeper-lockfile-upload
+  - yarn install --no-lockfile --non-interactive
+
 script:
-- yarn lint:js
-- COVERAGE=true node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
-- codecov
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO
+
 notifications:
   webhooks:
     urls:
@@ -49,3 +82,13 @@ notifications:
   slack:
     rooms:
       secure: aPapcytj6zjoGBdPygCV48AifsPQJ7zuuDpKn50bkekUerc0nGAq0HK+lleev5Sps+78PP9TC2GRYWNsYVOm6V7Bd0DHonQexq9f3JOo0HUafDXDWSZAFJIN0ie5iHazjoTijfXdXyOsxBP1EineLLq5KDIYnCfiYj7JXwi4j6BodNV0sOW4tW8dmsEOD8yT/R0wtFfc0/jKGwlBEp+HVIl24Dr3NAnsGKlXy+hkaWsFyuWauRmzjsCI2m4Y1tQB4JfmhZdlV8v8yIaax4EXWv1f7SS51sBMjeH/hTbpEyGcs5FY823q/3uhzIqHgRDfiEYn0tMsBftXGb5BSeB4j7YRwvFLBq0OTSPejtsxSXGgt2+pl4uFnmyuwkkTgaIxVOqc4nymXoDbIBBxbsfsapVv5zts9Q6HuNvleS0XkM7oeNn6sD7H5WtRwpJ6irfy1hf6tZp4sGZ/dnhoHNsHuuqEm5ZNkFmvYQ9yyXNnSCS9ZpuVGvI12adbSVzfiEF7HqeL58/L01VeTm/jlvaBz505N6yDRdJ2uTdhLHNoK48hgsfmNalZf2pIpRb+PWqud9vzVUiJPjNAgr1pxyabpBLGJSKk3ESevXyzsdoQvkFEUCMGShn7SBt9Fw2nvYWfBpx4+1C3hLpbUj9p2YNfH836zEh755B2+G8BGy5UGC4=
+
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: devo.tox.89@gmail.com
+  api_key:
+    secure: xiZKqu/MUm4HUiKxR4IF3D2TnmVaBaCcugj11LelN7ETkEHdeAtbH/ks/Kjp6NYb2RnKA6Z+0Sle2TSk/SxCGpWREo7DW6kHJ4cnp1IXXkSM1ADCONcgUR8STicuBMdqgo9wq8LRJLmI7gJ+4UXJ+UTcxEsQUsr62N47R13mklRdSpjs0OLOkNc8uUYW+oKZuA+ebZ5xNDSFQuLqVl7wk0APUok2J3YKCGEkKakHdJQn9R/kRIQsvz4moMQ2CXLwAuBATQfrCbk/bg4Sn4d5gdWMFl3Pfq1kEQJ2XZuvnqlF+6zCTLsjxlP6ymoRZKmq5S21YrkfBauZMdT7f7WEJ8HB8N4DjrVfCFEKxhDAcDPTzFVvrBA9ju0nAHEpsPJTirj3RwhDU8uv5p4yVyV+01otGajlcPi5rjP6INl9gVMP26dYxBv0R0dilGMH6XqTxi2MEvTF194eezxEh3qwVf3qevJhsTQznY9VmQqV+3VUTxRe3DE4p5KlYfCjVf9fUmHAbpdjWhRus8ArkvdFPyiPyOR+upUT+tzagB29tOxV/GGV6uOebaIdWJNnEA23nHzf8rcTeySUEnFYQDoTUsie8mF6wIbiz0TLxgFpN6YbSBZGEpARIpBRV0nzcVD11g/vmO8wtp4KoD1JOwXAGGF6Cy+KRNTIaKSUnNR6p3A=
+  on:
+    tags: true
+    repo: devotox/ember-cli-liquid-fire-events
