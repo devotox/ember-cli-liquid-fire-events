@@ -1837,7 +1837,7 @@ broccoli-clean-css@^1.1.0:
     inline-source-map-comment "^1.0.5"
     json-stable-stringify "^1.0.0"
 
-broccoli-concat@^3.2.2, broccoli-concat@^3.4.0, broccoli-concat@^3.7.3:
+broccoli-concat@^3.2.2, broccoli-concat@^3.7.1, broccoli-concat@^3.7.3:
   version "3.7.3"
   resolved "https://registry.yarnpkg.com/broccoli-concat/-/broccoli-concat-3.7.3.tgz#0dca01311567ffb13180e6b4eb111824628e4885"
   integrity sha512-2Ma9h81EJ0PRb9n4sW0i8KZlcnpTQfKxcj87zvi5DFe1fd8CTDEdseHDotK2beuA2l+LbgVPfd8EHaBJKm/Y8g==
@@ -2034,7 +2034,7 @@ broccoli-node-info@1.1.0, broccoli-node-info@^1.1.0:
   resolved "https://registry.yarnpkg.com/broccoli-node-info/-/broccoli-node-info-1.1.0.tgz#3aa2e31e07e5bdb516dd25214f7c45ba1c459412"
   integrity sha1-OqLjHgflvbUW3SUhT3xFuhxFlBI=
 
-broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.2.0, broccoli-persistent-filter@^1.4.3:
+broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.4.3:
   version "1.4.6"
   resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-1.4.6.tgz#80762d19000880a77da33c34373299c0f6a3e615"
   integrity sha512-0RejLwoC95kv4kta8KAa+FmECJCK78Qgm8SRDEK7YyU0N9Cx6KpY3UCDy9WELl3mCXLN8TokNxc7/hp3lL4lfw==
@@ -2723,7 +2723,7 @@ debug@2.6.9, debug@^2.1.0, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.3.
   dependencies:
     ms "2.0.0"
 
-debug@^3.0.0, debug@^3.0.1, debug@^3.1.0, debug@^3.2.6:
+debug@^3.0.1, debug@^3.1.0, debug@^3.2.6:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
@@ -3064,22 +3064,22 @@ ember-cli-string-utils@^1.1.0:
   resolved "https://registry.yarnpkg.com/ember-cli-string-utils/-/ember-cli-string-utils-1.1.0.tgz#39b677fc2805f55173735376fcef278eaa4452a1"
   integrity sha1-ObZ3/CgF9VFzc1N2/O8njqpEUqE=
 
-ember-cli-template-lint@1.0.0-beta.1:
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-template-lint/-/ember-cli-template-lint-1.0.0-beta.1.tgz#8cffc1939885216135d627621d6e02fd485d1978"
-  integrity sha512-rBuWIG/uIkwH7SNIS72VglruVukqeJW5dReNIvFiQgJPz3TLou5x6u605WKUAOYaPEHq9z7dRRKz1qmK7kPfdg==
+ember-cli-template-lint@1.0.0-beta.3:
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-template-lint/-/ember-cli-template-lint-1.0.0-beta.3.tgz#48f2fa43e7ad0172685fa171e5acd4d75b873792"
+  integrity sha512-ivrvYih+cx7VUlyyMQBmk61Ki+gT5axfppWrk6fSvHaoxHZadXU3zRJMT5DPkeRaayRu0y1dls4wqfrUhzQ1PA==
   dependencies:
     aot-test-generators "^0.1.0"
-    broccoli-concat "^3.4.0"
-    broccoli-persistent-filter "^1.2.0"
+    broccoli-concat "^3.7.1"
+    broccoli-persistent-filter "^2.1.0"
     chalk "^2.4.1"
-    debug "^3.0.0"
-    ember-cli-version-checker "^2.1.2"
-    ember-template-lint "^1.0.0-beta.2"
+    debug "^4.0.1"
+    ember-cli-version-checker "^3.0.1"
+    ember-template-lint "^1.1.0"
     json-stable-stringify "^1.0.1"
     md5-hex "^2.0.0"
     strip-ansi "^4.0.0"
-    walk-sync "^0.3.2"
+    walk-sync "^1.1.3"
 
 ember-cli-test-loader@^2.2.0:
   version "2.2.0"
@@ -3110,6 +3110,14 @@ ember-cli-version-checker@^3.0.0:
   integrity sha512-SNY7757cqj5GmES9dlWb43aWoGUcc+keniu+Rvsl/C/TnSK99edgL6eG4+Zr0ESeJ1hEcI3UrHN/8GIcK5eJUQ==
   dependencies:
     resolve-package-path "^1.1.1"
+    semver "^5.6.0"
+
+ember-cli-version-checker@^3.0.1:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-3.1.3.tgz#7c9b4f5ff30fdebcd480b1c06c4de43bb51c522c"
+  integrity sha512-PZNSvpzwWgv68hcXxyjREpj3WWb81A7rtYNQq1lLEgrWIchF8ApKJjWP3NBpHjaatwILkZAV8klair5WFlXAKg==
+  dependencies:
+    resolve-package-path "^1.2.6"
     semver "^5.6.0"
 
 ember-cli@3.8.1:
@@ -3332,7 +3340,7 @@ ember-source@3.8.0:
     jquery "^3.3.1"
     resolve "^1.9.0"
 
-ember-template-lint@^1.0.0-beta.2:
+ember-template-lint@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.1.0.tgz#312e101728452bf082f54cbe429ed9b52273ba64"
   integrity sha512-DPEWdjaNVIC58wJqeJStvQzk2gyKN5/u6dJfDKQ7mRJaouoLP1hZjSZwwpyO9bj10E9/3OJZnLmx1jjJ9/nqWA==
@@ -6601,6 +6609,14 @@ resolve-package-path@^1.0.11, resolve-package-path@^1.1.1:
     path-root "^0.1.1"
     resolve "^1.10.0"
 
+resolve-package-path@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/resolve-package-path/-/resolve-package-path-1.2.6.tgz#48f5d69a5b3a0ea68f7b9c7398459dd4125807c7"
+  integrity sha512-He6cGWU74tJ6wLYSKrbvWOfIXf2tUu5RcBWqX/2K9Ju00CncF5WRdCOJQisqCtaULcqIqpLvMtz8ZjfpwlBwqg==
+  dependencies:
+    path-root "^0.1.1"
+    resolve "^1.10.0"
+
 resolve-path@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/resolve-path/-/resolve-path-1.4.0.tgz#c4bda9f5efb2fce65247873ab36bb4d834fe16f7"
@@ -7585,7 +7601,7 @@ walk-sync@^0.3.0, walk-sync@^0.3.1, walk-sync@^0.3.2, walk-sync@^0.3.3:
     ensure-posix-path "^1.0.0"
     matcher-collection "^1.0.0"
 
-walk-sync@^1.0.0:
+walk-sync@^1.0.0, walk-sync@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/walk-sync/-/walk-sync-1.1.3.tgz#3b7b6468f068b5eba2278c931c57db3d39092969"
   integrity sha512-23ivbET0Q/389y3EHpiIgxx881AS2mwdXA7iBqUDNSymoTPYb2jWlF3gkuuAP1iLgdNXmiHw/kZ/wZwrELU6Ag==
