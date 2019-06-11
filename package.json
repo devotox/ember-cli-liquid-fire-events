@@ -72,7 +72,7 @@
     "ember-try": "1.2.1",
     "eslint-plugin-ember": "6.5.1",
     "eslint-plugin-node": "9.1.0",
-    "liquid-fire": "0.29.5",
+    "liquid-fire": "0.30.0",
     "loader.js": "4.7.0"
   },
   "ember-addon": {
