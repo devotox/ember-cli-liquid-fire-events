@@ -4593,9 +4593,9 @@ http-errors@~1.6.2:
     statuses ">= 1.4.0 < 2"
 
 http-parser-js@>=0.4.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.5.0.tgz#d65edbede84349d0dc30320815a15d39cc3cbbd8"
-  integrity sha512-cZdEF7r4gfRIq7ezX9J0T+kQmJNOub71dWbgAXVHDct80TKP4MCETtZQ31xyv38UwgzkWPYF/Xc0ge55dW9Z9w==
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/http-parser-js/-/http-parser-js-0.5.1.tgz#6b197a6226ccb96e52c32e8f0973b5dd923e1ba0"
+  integrity sha512-klJydAEoXHWYRtOoDwtNVIF6xrYCMTHnG8hu8uASFCmj9qNZ9R3kWeZ7NgqLctY9QRkvsNoqOmN6Lw2qZmGgVQ==
 
 http-proxy@^1.13.1, http-proxy@^1.17.0:
   version "1.17.0"
