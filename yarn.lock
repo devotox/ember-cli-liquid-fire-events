@@ -926,9 +926,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.11.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.2.tgz#75ba3beda30d690b89a5089ca1c6e8e386150b76"
-  integrity sha512-dsfE4BHJkLQW+reOS6b17xhZ/6FB1rB8eRRvO08nn5o+voxf3i74tuyFWNH6djdfgX7Sm5s6LD8t6mJug4dpDw==
+  version "12.11.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.7.tgz#57682a9771a3f7b09c2497f28129a0462966524a"
+  integrity sha512-JNbGaHFCLwgHn/iCckiGSOZ1XYHsKFwREtzPwSGCVld1SGhOlmZw2D4ZI94HQCrBHbADzW9m4LER/8olJTRGHA==
 
 "@types/symlink-or-copy@^1.2.0":
   version "1.2.0"
@@ -3631,9 +3631,9 @@ ember-source@3.13.3:
     silent-error "^1.1.1"
 
 ember-template-lint@^1.1.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.6.0.tgz#cc330b87e8bd396548ee2cb7dbd054c8ca8296ea"
-  integrity sha512-PUDHvjtpl5U/H5HaMmTTKYiRJuKcXa+NlRzieSfqzwIOB1JbLhM/OzSIZnO2RdJamczmXgC+0MAo/hd+ygFTew==
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.6.1.tgz#9530f702996691d479570be71cab396d42b07234"
+  integrity sha512-vETWXQtQzv+hZc0/vOrox0+6G+5Sr0qPEOnaTy0ZkwcRv9TJyflru7IXm3V1vEtKCljR7pHzRQ4/IsSEWSDLVw==
   dependencies:
     "@glimmer/syntax" "^0.42.2"
     chalk "^2.0.0"
