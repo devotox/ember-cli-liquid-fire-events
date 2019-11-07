@@ -3950,9 +3950,9 @@ events-to-array@^1.0.1:
   integrity sha1-LUH1Y+H+QA7Uli/hpNXGp1Od9/Y=
 
 exec-sh@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.2.tgz#6738de2eb7c8e671d0366aea0b0db8c6f7d7391b"
-  integrity sha512-9sLAvzhI5nc8TpuQUh4ahMdCrWT00wPWz7j47/emR5+2qEfoZP5zzUXvx+vdx+H6ohhnsYC31iX04QLYJK8zTg==
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.3.tgz#73a9b58ab2720570ac7bea1e0863867adede89d4"
+  integrity sha512-6HhvwrDKxv1k8wm4XHF35Ou0BbaGBiKd9EdP2JkmCEmlSWegs1lJSDT5sBLNs0S+0Zr94goCUCLWvmI5J7R5OQ==
 
 execa@^1.0.0:
   version "1.0.0"
