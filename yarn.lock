@@ -5864,9 +5864,9 @@ morgan@^1.9.1:
     on-headers "~1.0.1"
 
 mout@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/mout/-/mout-1.2.0.tgz#cc39cef0c8d26f9d19a3a930e427ba56418e8c07"
-  integrity sha512-wDVchpsFnaZADra0+negYAMLW7gW6Lz9MYWXXO2KZ/cldiFm4pZg2/IEy1Cp4ZKoVjcRcYePlqyGV7dg5T0i0w==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/mout/-/mout-1.2.2.tgz#c9b718a499806a0632cede178e80f436259e777d"
+  integrity sha512-w0OUxFEla6z3d7sVpMZGBCpQvYh8PHS1wZ6Wu9GNKHMpAHWJ0if0LsQZh3DlOqw55HlhJEOMLpFnwtxp99Y5GA==
 
 ms@2.0.0:
   version "2.0.0"
