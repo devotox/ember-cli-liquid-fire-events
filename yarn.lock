@@ -6637,9 +6637,9 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     safe-regex "^1.1.0"
 
 regexp-tree@^0.1.6:
-  version "0.1.15"
-  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.15.tgz#be34245f2bf0694ce39bdb90988f126187a336d3"
-  integrity sha512-VQhue5y8rFzy2OVG6i6V8ImiNFEu1uLZLLeitc+a7yK1C8pluyubdRf6+n/qeb9SD8TlYqUHxiDrX+1v9dNuSg==
+  version "0.1.16"
+  resolved "https://registry.yarnpkg.com/regexp-tree/-/regexp-tree-0.1.16.tgz#0715feadb6f766aad7eac5ef4287d2c39acf2fc5"
+  integrity sha512-nXWhGJLTWLNdhWF1uqoXQgAOgv8mQGpgXTOk8BWp08YMOKCtn74VoyOJ+AXZ68Dj50Myd+msYs+aGRBzWJ5dJA==
 
 regexpp@^2.0.1:
   version "2.0.1"
