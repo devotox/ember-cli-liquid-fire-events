@@ -1029,25 +1029,25 @@
     ember-cli-htmlbars-inline-precompile "^2.1.0"
     ember-test-waiters "^1.1.1"
 
-"@glimmer/interfaces@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.44.0.tgz#0896204815f05fd8907b5703cbaee9d1b9edf5d3"
-  integrity sha512-O1VBrB1uhWh/XpBRaMbT5zncZiJJNTAqe0rnhRr4JicrlmNoIC4/5ADRgDORj5oBxuENjuZ+6UTul3WCOHETiw==
+"@glimmer/interfaces@^0.45.1":
+  version "0.45.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/interfaces/-/interfaces-0.45.1.tgz#cdecf705def0fd53f4bbd53056f14802ee3e0608"
+  integrity sha512-/sCv0YxL2aAY+DAByJcrKZZZoMAZEiB09YEpdml/8p8llb+K7CQXdYG4cHkLGIDWMsjfJV9zGZIGiT8thyS2yQ==
 
-"@glimmer/syntax@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.44.0.tgz#66a4d0a5047becb210259e7678b6efa9c14dbc6f"
-  integrity sha512-B/kLng2z9Cf/7jbfY7p50Q/3ouUouVT5jBgGVVTJJHvtCbrNszdMj3XY0v3hLxB83TASXf1dwJh3CNni82JnOQ==
+"@glimmer/syntax@^0.45.0":
+  version "0.45.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/syntax/-/syntax-0.45.1.tgz#16befe3bf53e877eb67c2a704641925266654ed1"
+  integrity sha512-8aU1e1+nq3HLVoaI9nNlARex3aFAOKQf3tm+T1rkA2rOyJPfHOKg7f4BNhzWcijKW/+1MGYXnlOFiaHQKZ4BWA==
   dependencies:
-    "@glimmer/interfaces" "^0.44.0"
-    "@glimmer/util" "^0.44.0"
+    "@glimmer/interfaces" "^0.45.1"
+    "@glimmer/util" "^0.45.1"
     handlebars "^4.5.1"
     simple-html-tokenizer "^0.5.8"
 
-"@glimmer/util@^0.44.0":
-  version "0.44.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.44.0.tgz#45df98d73812440206ae7bda87cfe04aaae21ed9"
-  integrity sha512-duAsm30uVK9jSysElCbLyU6QQYO2X9iLDLBIBUcCqck9qN1o3tK2qWiHbGK5d6g8E2AJ4H88UrfElkyaJlGrwg==
+"@glimmer/util@^0.45.1":
+  version "0.45.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/util/-/util-0.45.1.tgz#63c63ea297f0594e5c6a7c46677fb2e356df9749"
+  integrity sha512-bzESazW81esdUHJaZQnzEm4YUVsCHEUpaz8YsjNZkoiBftBnSvqLrPez1ji/wpx94IM8ZlkzJZMI8b+k0A2Lgw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1092,9 +1092,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.12.17"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.17.tgz#191b71e7f4c325ee0fb23bc4a996477d92b8c39b"
-  integrity sha512-Is+l3mcHvs47sKy+afn2O1rV4ldZFU7W8101cNlOd+MRbjM4Onida8jSZnJdTe/0Pcf25g9BNIUsuugmE6puHA==
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.0.tgz#225cbaac5fdb2b9ac651b02c070d8aa3c37cc812"
+  integrity sha512-zwrxviZS08kRX40nqBrmERElF2vpw4IUTd5khkhBTfFH8AOaeoLVx48EC4+ZzS2/Iga7NevncqnsUSYjM4OWYA==
 
 "@types/symlink-or-copy@^1.2.0":
   version "1.2.0"
@@ -3830,11 +3830,11 @@ ember-source@3.15.0:
     silent-error "^1.1.1"
 
 ember-template-lint@^1.1.0:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.12.1.tgz#98fb0110a97b50818cfa88f2599ac5b0047c0c95"
-  integrity sha512-wgnEQNRHxZ6UoRINbX1HMzpa67bt8UhuRsi1Ody5rlwgPlqVy2BIhIq7u+BGTgvNXGhPqKaKuiZKcI/EZh0CXg==
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/ember-template-lint/-/ember-template-lint-1.12.2.tgz#09143197be2a20778d29f5f912d39b472f26a47f"
+  integrity sha512-scf7lzIArLaFt5bq3tmC+BP9vywzct4Z0ttSTtrIR9CZeCBoEUFudNlc1aDqp++fM94LcEEHkmEzKnDUStXJZQ==
   dependencies:
-    "@glimmer/syntax" "^0.44.0"
+    "@glimmer/syntax" "^0.45.0"
     chalk "^2.0.0"
     globby "^9.0.0"
     minimatch "^3.0.4"
@@ -7043,9 +7043,9 @@ resolve@1.9.0:
     path-parse "^1.0.6"
 
 resolve@^1.1.3, resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.14.0, resolve@^1.3.2, resolve@^1.3.3, resolve@^1.4.0, resolve@^1.5.0, resolve@^1.8.1:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.0.tgz#6d14c6f9db9f8002071332b600039abf82053f64"
-  integrity sha512-uviWSi5N67j3t3UKFxej1loCH0VZn5XuqdNxoLShPcYPw6cUZn74K1VRj+9myynRX03bxIBEkwlkob/ujLsJVw==
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.14.1.tgz#9e018c540fcf0c427d678b9931cbf45e984bcaff"
+  integrity sha512-fn5Wobh4cxbLzuHaE+nphztHy43/b++4M6SsGFC2gB8uYwf0C8LcarfCz1un7UTW8OFQg9iNjZ4xpcFVGebDPg==
   dependencies:
     path-parse "^1.0.6"
 
